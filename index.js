@@ -7,9 +7,9 @@ const path = require("path");
 const { promisify } = require('util');
 const exec = promisify(require('child_process').exec);
 const { execSync } = require('child_process');
-const FILE_PATH = process.env.FILE_PATH || './temp'; // 运行文件夹，节点文件存放目录
+const FILE_PATH = process.env.FILE_PATH || './mike'; // 运行文件夹，节点文件存放目录
 const projectPageURL = process.env.URL || '';        // 填写项目域名可开启自动访问保活，非标端口的前缀是http://
-const intervalInseconds = process.env.TIME || 120;   // 自动访问间隔时间（120秒）
+const intervalInseconds = process.env.TIME || 240;   // 自动访问间隔时间（120秒）
 const UUID = process.env.UUID || '85315c90-78ff-43aa-a780-585c9d4d6d52';
 const ZHAZHA_SERVER = process.env.ZHAZHA_SERVER || 'nezha.dfgdrh.cf';      // 哪吒3个变量不全不运行
 const ZHAZHA_PORT = process.env.ZHAZHA_PORT || '443';              // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一时开启tls
@@ -19,7 +19,7 @@ const GOGO_AUTH = process.env.GOGO_AUTH || '{"AccountTag":"0a789bb28a9d5ec2ef558
 const CFIP = process.env.CFIP || 'skk.moe';                   // 优选域名或优选ip
 const CFPORT = process.env.CFPORT || 443;                    // 节点端口
 const NAME = process.env.NAME || 'Vls';                     // 节点名称
-const ARGO_PORT = process.env.ARGO_PORT || 28080;           // Argo端口，使用固定隧道token需和cf后台设置的端口对应
+const ARGO_PORT = process.env.ARGO_PORT || 28880;           // Argo端口，使用固定隧道token需和cf后台设置的端口对应
 const PORT = process.env.SERVER_PORT || process.env.PORT || 22000; // 节点订阅端口，若无法订阅请手动改为分配的端口
 
 //创建运行文件夹
